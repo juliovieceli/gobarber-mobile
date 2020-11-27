@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 import {
   Image,
   View,
@@ -9,7 +9,7 @@ import {
   TextInput,
   Alert,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
 import Icon from 'react-native-vector-icons/Feather';

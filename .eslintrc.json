@@ -1,5 +1,6 @@
 {
   "env": {
+    "browser": false,
     "es2020": true
   },
   "extends": [
@@ -24,12 +25,20 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "camelcase":"off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "react-hooks/rules-of-hooks": "error",
     "react/prop-types": "off",
     "react-hooks/exhaustive-deps": "warn",
+    "import/no-unresolved": 0,
     "react/jsx-filename-extension": [
       1,
       {
@@ -58,7 +67,9 @@
   },
   "settings": {
     "import/resolver": {
-      "typeScript": {}
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   }
 }
