@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
   Image,
   View,
@@ -9,7 +9,7 @@ import {
   TextInput,
   Alert,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
 import Icon from 'react-native-vector-icons/Feather';
@@ -29,7 +29,7 @@ interface SignUpFormData {
   password: string;
 }
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const emailInputRef = useRef<TextInput>(null);
   const passwordInputRef = useRef<TextInput>(null);
@@ -76,7 +76,7 @@ const SignIn: React.FC = () => {
         await api.post('/users', data);
 
         Alert.alert(
-          'Cadastro relaizado com sucesso',
+          'Cadastro realizado com sucesso',
           'Você já pode fazer login na aplicação',
         );
 
@@ -173,4 +173,4 @@ const SignIn: React.FC = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

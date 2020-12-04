@@ -82,7 +82,6 @@ const CreateAppointment: React.FC = () => {
       })
       .then((response) => {
         setDayAvailability(response.data);
-        console.log(response.data);
       });
   }, [selectedDate, selectedProvider]);
 
